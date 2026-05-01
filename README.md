@@ -128,5 +128,5 @@ This system improves transparency and efficiency in handling campus issues by pr
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Sukhad Mehrotra**
  
