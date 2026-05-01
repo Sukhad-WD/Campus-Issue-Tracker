@@ -1,0 +1,116 @@
+:root {
+
+  --primary-color: #22c55e;        /* green */
+  --primary-hover: #16a34a;        /* darker green */
+  --bg-color: #31f06b;             /* very light green (background) */
+  --card-bg: #ffffff;              /* white cards */
+  --text-main: #000000;            /* black text */
+  --text-muted: #374151;
+  --border-color: #d1fae5;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #10d36e, #1bd377);
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.auth-container h1 {
+  color: #0c0a0a;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+.auth-card h2 {
+  color: #000000;
+}
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #dcfce7;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-open { background: #dcfce7; color: #166534; }
+.status-progress { background: #fef9c3; color: #854d0e; }
+.status-resolved { background: #e0e7ff; color: #3730a3; }
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid #d1fae5;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.logo-container img {
+  width: 100px;     /* adjust this */
+  height: auto;     /* keeps aspect ratio */
+  object-fit: contain;
+}

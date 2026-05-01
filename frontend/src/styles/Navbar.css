@@ -1,0 +1,147 @@
+.site-header {
+  width: 100%;
+  padding-top: 5rem; /* Increased to make room for the fixed nav box */
+  padding-bottom: 2rem;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.main-title {
+  margin-top: 2rem; /* Pushes the heading further below the navigation */
+}
+
+.heading-link {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color); /* Restored to primary color */
+  text-decoration: none;
+  letter-spacing: -0.025em;
+  text-transform: none;
+  color: rgb(13, 12, 12);
+}
+
+.top-navbar {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.nav-box {
+  background: var(--card-bg);
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border: 1px solid var(--border-color);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-text {
+}
+
+@media (max-width: 1100px) {
+  .nav-text {
+    display: none;
+  }
+}
+
+.admin-link {
+  color: var(--warning);
+}
+
+.nav-user-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border-color);
+}
+
+.user-icon-circle {
+  background: var(--bg-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.nav-username {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+@media (max-width: 1200px) {
+  .nav-username {
+    display: none;
+  }
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  color: var(--danger);
+  background: #fee2e2;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding-top: 6rem;
+  }
+  
+  .top-navbar {
+    right: 50%;
+    transform: translateX(50%);
+    top: 0.5rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .heading-link {
+    font-size: 1.8rem;
+  }
+  
+  .main-title {
+    margin-top: 1rem;
+  }
+}

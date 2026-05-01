@@ -1,0 +1,51 @@
+.admin-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.admin-table-container {
+  overflow-x: auto;
+  padding: 0;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th {
+  background: var(--bg-color);
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.admin-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9375rem;
+}
+
+.issue-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.issue-title {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.issue-loc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.status-select {
+  padding: 0.4rem;
+  font-size: 0.875rem;
+  width: auto;
+}
