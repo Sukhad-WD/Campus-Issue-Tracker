@@ -3,7 +3,7 @@ import type { User } from '../types';
 
 interface AuthContextType {
   user: User | null;
-  login: (userData: User) => void;
+  login: (userData: any) => void;
   logout: () => void;
   loading: boolean;
 }
@@ -22,14 +22,16 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     setLoading(false);
   }, []);
 
-  const login = (userData: User) => {
-    setUser(userData);
-    localStorage.setItem('userInfo', JSON.stringify(userData));
+  const login = (data: any) => {
+    localStorage.setItem("token", data.token); // ✅ store token
+    localStorage.setItem("userInfo", JSON.stringify(data)); // ✅ store user
+    setUser(data);
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('userInfo');
+    localStorage.removeItem("token");
+    localStorage.removeItem("userInfo");
   };
 
   return (
