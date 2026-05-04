@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://campus-issue-tracker-4.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 export default API;
