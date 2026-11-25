@@ -6,7 +6,9 @@ import generateToken from '../utils/generateToken';
 // @route   POST /api/users/register
 // @access  Public
 export const registerUser = async (req: Request, res: Response) => {
-  const { username, email, password, role } = req.body;
+  // NOTE: we do NOT read `role` from the request. Anyone could send
+  // { "role": "admin" } and promote themselves. New accounts are always students.
+  const { username, email, password } = req.body;
 
   const userExists = await User.findOne({ $or: [{ email }, { username }] });
 
@@ -18,7 +20,7 @@ export const registerUser = async (req: Request, res: Response) => {
     username,
     email,
     password,
-    role: role || 'student',
+    role: 'student',
   });
 
   if (user) {
