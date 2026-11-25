@@ -7,6 +7,12 @@ import issueRoutes from './routes/issueRoutes';
 
 dotenv.config();
 
+// Refuse to start without a JWT secret. Without it, tokens could be forged.
+if (!process.env.JWT_SECRET) {
+  console.error('FATAL: JWT_SECRET is not set. Add it to your .env file (or your hosting environment variables).');
+  process.exit(1);
+}
+
 connectDB();
 
 const app = express();

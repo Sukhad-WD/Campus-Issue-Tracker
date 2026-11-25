@@ -12,7 +12,8 @@ export const protect = async (req: AuthRequest, res: Response, next: NextFunctio
   if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
     try {
       token = req.headers.authorization.split(' ')[1];
-      const decoded: any = jwt.verify(token, process.env.JWT_SECRET || 'your_super_secret_key_here');
+      // JWT_SECRET is guaranteed to exist: index.ts stops the server at startup if it is missing.
+      const decoded: any = jwt.verify(token, process.env.JWT_SECRET as string);
       
       const user = await User.findById(decoded.id).select('-password');
       if (!user) {
